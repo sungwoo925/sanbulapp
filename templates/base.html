@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    {% block navbar %}
+    <div class="container">
+        <div class="page-header">
+            <div class="navbar navbar-fixed-top">
+                <div class="container">
+                    <br>
+                    <a href="/index" class="btn btn-info" role="button">Home</a>
+                    <a href="/prediction" class="btn btn-info" role="button">FF Prediction</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+    {% block content %}{% endblock %}
+    
+    <div class="container">
+        <footer> 2019250020 박성우</footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
