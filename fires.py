@@ -21,8 +21,8 @@ from sklearn.model_selection import train_test_split
 STRING_FIELD = StringField('max_wind_speed', validators=[DataRequired()])
 
 class LabForm(FlaskForm):
-    longtitude = StringField('longtitude(1-7)', validators=[DataRequired()]) 
-    latitude = StringField('latitude(1-7)', validators=[DataRequired()]) 
+    longtitude = StringField('longtitude', validators=[DataRequired()]) 
+    latitude = StringField('latitude', validators=[DataRequired()]) 
     month = StringField('month(01-Jan ~ Dec-12)', validators=[DataRequired()]) 
     day = StringField('day(00-sun ~ 06-sat, 07-hol)', validators=[DataRequired()]) 
     avg_temp = StringField('avg_temp', validators=[DataRequired()])
@@ -103,7 +103,7 @@ def lab():
         if "error" in response:
             raise RuntimeError(response["error"])
         
-        predD=np.array([pred['dense_3'][0] for pred in response["predictions"]])
+        predD=np.array([pred['dense_7'][0] for pred in response["predictions"]])
 
         # 백분율 값을 면적으로 변환
         area_result = convert_to_area_percentage(predD[0])
