@@ -54,7 +54,7 @@ def lab():
         # we must scale the data using the same scale as the one used to make model
         #get the data for fires data.
 
-        X_test = pd.DataFrame(X_test, columns=[ 'latitude', 'longitude', 'month', 'day',
+        X_test = pd.DataFrame(X_test, columns=[ 'longitude', 'latitude', 'month', 'day',
                                                'avg_temp', 'max_temp', 'max_wind_speed', 'avg_wind'])
         print(X_test.shape)
         print(X_test)
