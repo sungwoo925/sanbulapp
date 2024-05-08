@@ -60,7 +60,7 @@ def lab():
         print(X_test)
         
         # get the data for the diabetes data.   
-        data = pd.read_csv('./sanbul-5.csv', sep=',')
+        data = pd.read_csv('./sanbul2district-divby100.csv', sep=',')
 
         # 훈련 데이터셋 정의
         fires_train = data  # 전체 데이터를 사용하는 경우
